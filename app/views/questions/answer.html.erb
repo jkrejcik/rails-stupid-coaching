@@ -1,4 +1,18 @@
-<h1>Coaching sesssion:</h1>
-
-<p><%= @question %></p>
-<p><%= @answer %></p>
+<div class="ms-3">
+  <h1>Coaching sesssion:</h1>
+    <div class="ps-3 border-start border-4">
+      <p>
+      <% if @question.blank? %>
+        😶
+      <% else %>
+        <%= @question %>
+      <% end %>
+      </p>
+      <p>- You</p>
+    </div>
+    <div class="ps-3 myclass border-start border-4">
+      <p><%= @answer %></p>
+      <p>- Your Coach</p>
+    </div>
+  <%= link_to "Ask me next question", ask_path %>
+</div>
